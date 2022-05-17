@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import styles from './Routes.module.scss';
 import Main from './Main';
+import styles from './Routes.module.scss';
 
 const App = () => {
   return (
