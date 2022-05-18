@@ -38,7 +38,6 @@
     "@types/lodash": "^4.14.182",
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
-    "fuzzysort": "^1.9.0",
     "http-proxy-middleware": "^2.0.6",
     "i18n-iso-countries": "^7.4.0",
     "i18next": "^21.8.0",

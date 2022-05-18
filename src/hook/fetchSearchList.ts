@@ -7,7 +7,7 @@ const fetchSearchList = (params: string) => {
     `/B551182/diseaseInfoService/getDissNameCodeList?pageNo=1&numOfRows=50&ServiceKey=${serviceKey}&searchText=${params}&_type=json`
   )
     .then((res) => {
-      console.log({ res });
+      console.log({ params });
 
       const response = res.json();
       return response;

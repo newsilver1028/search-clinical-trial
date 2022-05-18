@@ -1,6 +1,6 @@
-import fuzzysort from 'fuzzysort';
 import fetchSearchList from 'hook/fetchSearchList';
 import useQueryDebounce from 'hook/useQueryDebounce';
+import { escapeRegExp } from 'lodash';
 import { BsSearch } from 'react-icons/bs';
 import { useQuery } from 'react-query';
 import styles from './searchRecommendation.module.scss';
@@ -8,12 +8,16 @@ import styles from './searchRecommendation.module.scss';
 const SearchRecommendation = ({ inputText }: { inputText: string }) => {
   const debounceSearchInput = useQueryDebounce({ value: inputText, delay: 1000 });
 
-  const { status, error, data } = useQuery<any>(['search', inputText], () => fetchSearchList(debounceSearchInput), {
-    enabled: !!inputText,
-    keepPreviousData: true,
-    refetchOnWindowFocus: false,
-    staleTime: 10000000000,
-  });
+  const { status, error, data } = useQuery<any>(
+    ['search', debounceSearchInput],
+    () => fetchSearchList(debounceSearchInput),
+    {
+      enabled: !!inputText,
+      keepPreviousData: true,
+      refetchOnWindowFocus: false,
+      staleTime: 10000000000,
+    }
+  );
 
   const isArrayData = Array.isArray(data);
 
@@ -66,6 +70,13 @@ const tempData = [
   { sickCd: 'A038', sickNm: '기타 시겔라증' },
 ];
 
-const encoded = '%EC%95%94';
-const result = fuzzysort.go('암', tempData, { key: 'sickNm', all: true });
-console.log({ result });
+function createFuzzyMatcher(input: string) {
+  const pattern = input.split('').map(escapeRegExp).join('.*?');
+  return new RegExp(pattern);
+}
+const regex = createFuzzyMatcher('암');
+
+tempData.forEach((data) => {
+  const result = regex.test(data.sickNm); // true
+  // console.log({ result });
+});
