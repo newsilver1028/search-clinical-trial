@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-const useQueryDebounce = ({ value, delay = 200 }: { value: string; delay: number }) => {
+const useQueryDebounce = ({ value, delay = 1000 }: { value: string; delay: number }) => {
   const [debounceValue, setDebounceValue] = useState(value);
 
   useEffect(() => {
-    const handler = setTimeout(() => {
+    const handler: NodeJS.Timeout = setTimeout(() => {
       setDebounceValue(value);
     }, delay);
     return () => {

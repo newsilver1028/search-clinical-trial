@@ -9,7 +9,7 @@ const SearchBar = ({ onHandle, onSubmit }: { onHandle: (e: any) => void; onSubmi
         <div>
           <BsSearch className={styles.reactIcons} />
         </div>
-        <form>
+        <form onSubmit={onSubmit}>
           <input type='text' placeholder='질환명을 입력해 주세요.' onChange={onHandle} />
         </form>
         <button type='button' onSubmit={onSubmit}>

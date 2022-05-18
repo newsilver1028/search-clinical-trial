@@ -7,8 +7,6 @@ const Main = () => {
   const [inputText, setInputText] = useState('');
   const [searchText, setSearchText] = useState('');
 
-  // const debounceSearchInput = useQueryDebounce({ value: inputText, delay: 200 });
-
   const handleInput = (e: any) => {
     const { value } = e.currentTarget;
     const encodedValue = encodeURI(value);

@@ -2556,6 +2556,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/fuzzy-search@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "@types/fuzzy-search@npm:2.1.2"
+  checksum: ac030b111571360f211cb4f29ef71f082fca55cd093197ee2e9e2fb8f5eb693fd62d175f4b523b52bc6d455b7dd232d623f14d6e6e6f690ac9cc29c792764393
+  languageName: node
+  linkType: hard
+
 "@types/graceful-fs@npm:^4.1.2":
   version: 4.1.5
   resolution: "@types/graceful-fs@npm:4.1.5"
@@ -6412,6 +6419,7 @@ __metadata:
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^13.0.0
     "@testing-library/user-event": ^13.2.1
+    "@types/fuzzy-search": ^2.1.2
     "@types/jest": ^27.0.1
     "@types/lodash": ^4.14.182
     "@types/node": ^16.7.13
@@ -6435,6 +6443,7 @@ __metadata:
     eslint-plugin-react-hooks: ^4.5.0
     eslint-plugin-testing-library: ^5.3.1
     eslint-webpack-plugin: ^3.1.1
+    fuzzy-search: ^3.2.1
     i18n-iso-countries: ^7.4.0
     i18next: ^21.8.0
     i18next-browser-languagedetector: ^6.1.4
@@ -6576,6 +6585,13 @@ __metadata:
   version: 1.2.3
   resolution: "functions-have-names@npm:1.2.3"
   checksum: c3f1f5ba20f4e962efb71344ce0a40722163e85bee2101ce25f88214e78182d2d2476aa85ef37950c579eb6cf6ee811c17b3101bb84004bb75655f3e33f3fdb5
+  languageName: node
+  linkType: hard
+
+"fuzzy-search@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "fuzzy-search@npm:3.2.1"
+  checksum: 65d50909e69216f830a6e88eade08df00662e2c081edb02063404cc922cc7319ef8958eff781aa4e3e64543a394a912cd8c80abb4c6b158c119e811364e7cfb9
   languageName: node
   linkType: hard
 
