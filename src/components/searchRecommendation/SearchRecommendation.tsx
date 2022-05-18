@@ -1,11 +1,9 @@
+import fuzzysort from 'fuzzysort';
 import fetchSearchList from 'hook/fetchSearchList';
 import useQueryDebounce from 'hook/useQueryDebounce';
 import { BsSearch } from 'react-icons/bs';
 import { useQuery } from 'react-query';
-
 import styles from './searchRecommendation.module.scss';
-
-import FuzzySearch from 'fuzzy-search';
 
 const SearchRecommendation = ({ inputText }: { inputText: string }) => {
   const debounceSearchInput = useQueryDebounce({ value: inputText, delay: 1000 });
@@ -68,9 +66,6 @@ const tempData = [
   { sickCd: 'A038', sickNm: '기타 시겔라증' },
 ];
 
-const fuzzyString = new FuzzySearch(tempData, ['sickNm'], {
-  caseSensitive: false,
-  sort: true,
-});
-const result = fuzzyString.search('암');
+const encoded = '%EC%95%94';
+const result = fuzzysort.go('암', tempData, { key: 'sickNm', all: true });
 console.log({ result });

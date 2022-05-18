@@ -2071,26 +2071,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@reduxjs/toolkit@npm:^1.8.1":
-  version: 1.8.1
-  resolution: "@reduxjs/toolkit@npm:1.8.1"
-  dependencies:
-    immer: ^9.0.7
-    redux: ^4.1.2
-    redux-thunk: ^2.4.1
-    reselect: ^4.1.5
-  peerDependencies:
-    react: ^16.9.0 || ^17.0.0 || ^18
-    react-redux: ^7.2.1 || ^8.0.0-beta
-  peerDependenciesMeta:
-    react:
-      optional: true
-    react-redux:
-      optional: true
-  checksum: be5cdea975a8a631fe2d88cafc7077554c7bc3621a4a7031556cc17e5dec26359018f2614c325895e7ab50865f5c511025d1e589ca01de7e2bd88d95e0a1a963
-  languageName: node
-  linkType: hard
-
 "@rollup/plugin-babel@npm:^5.2.0":
   version: 5.3.1
   resolution: "@rollup/plugin-babel@npm:5.3.1"
@@ -2553,13 +2533,6 @@ __metadata:
     "@types/qs": "*"
     "@types/serve-static": "*"
   checksum: 12a2a0e6c4b993fc0854bec665906788aea0d8ee4392389d7a98a5de1eefdd33c9e1e40a91f3afd274011119c506f7b4126acb97fae62ae20b654974d44cba12
-  languageName: node
-  linkType: hard
-
-"@types/fuzzy-search@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "@types/fuzzy-search@npm:2.1.2"
-  checksum: ac030b111571360f211cb4f29ef71f082fca55cd093197ee2e9e2fb8f5eb693fd62d175f4b523b52bc6d455b7dd232d623f14d6e6e6f690ac9cc29c792764393
   languageName: node
   linkType: hard
 
@@ -4977,13 +4950,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:^1.11.2":
-  version: 1.11.2
-  resolution: "dayjs@npm:1.11.2"
-  checksum: 78f8bd04a9e5f5554aa06eacda65a7d59e162d39f621a46fd34fb3b51367c3662426d86b4e2f4ac535f81e0c4d5af3e8a83b37e672412eb556267d726c61f8f3
-  languageName: node
-  linkType: hard
-
 "debug@npm:2.6.9, debug@npm:^2.6.0, debug@npm:^2.6.9":
   version: 2.6.9
   resolution: "debug@npm:2.6.9"
@@ -6415,11 +6381,9 @@ __metadata:
   resolution: "foundation-ts@workspace:."
   dependencies:
     "@react-icons/all-files": ^4.1.0
-    "@reduxjs/toolkit": ^1.8.1
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^13.0.0
     "@testing-library/user-event": ^13.2.1
-    "@types/fuzzy-search": ^2.1.2
     "@types/jest": ^27.0.1
     "@types/lodash": ^4.14.182
     "@types/node": ^16.7.13
@@ -6429,7 +6393,6 @@ __metadata:
     axios: ^0.27.2
     babel-eslint: ^10.1.0
     classnames: ^2.3.1
-    dayjs: ^1.11.2
     eslint: ^8.14.0
     eslint-config-airbnb: ^19.0.4
     eslint-config-prettier: ^8.5.0
@@ -6443,7 +6406,8 @@ __metadata:
     eslint-plugin-react-hooks: ^4.5.0
     eslint-plugin-testing-library: ^5.3.1
     eslint-webpack-plugin: ^3.1.1
-    fuzzy-search: ^3.2.1
+    fuzzysort: ^1.9.0
+    http-proxy-middleware: ^2.0.6
     i18n-iso-countries: ^7.4.0
     i18next: ^21.8.0
     i18next-browser-languagedetector: ^6.1.4
@@ -6588,10 +6552,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fuzzy-search@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "fuzzy-search@npm:3.2.1"
-  checksum: 65d50909e69216f830a6e88eade08df00662e2c081edb02063404cc922cc7319ef8958eff781aa4e3e64543a394a912cd8c80abb4c6b158c119e811364e7cfb9
+"fuzzysort@npm:^1.9.0":
+  version: 1.9.0
+  resolution: "fuzzysort@npm:1.9.0"
+  checksum: bfc32a83d03d3bfcb92c1b3abe3302e9fe8045059fa1ce3a01482d1e2b96c2c836c361a2090447ce85443af62d204a53584d4706832bef893ef60ee3900985a1
   languageName: node
   linkType: hard
 
@@ -7102,7 +7066,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"http-proxy-middleware@npm:^2.0.3":
+"http-proxy-middleware@npm:^2.0.3, http-proxy-middleware@npm:^2.0.6":
   version: 2.0.6
   resolution: "http-proxy-middleware@npm:2.0.6"
   dependencies:
@@ -11288,24 +11252,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redux-thunk@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "redux-thunk@npm:2.4.1"
-  peerDependencies:
-    redux: ^4
-  checksum: af5abb425fb9dccda02e5f387d6f3003997f62d906542a3d35fc9420088f550dc1a018bdc246c7d23ee852b4d4ab8b5c64c5be426e45a328d791c4586a3c6b6e
-  languageName: node
-  linkType: hard
-
-"redux@npm:^4.1.2":
-  version: 4.2.0
-  resolution: "redux@npm:4.2.0"
-  dependencies:
-    "@babel/runtime": ^7.9.2
-  checksum: 75f3955c89b3f18edf5411e5fb482aa2e4f41a416183e8802a6bf6472c4fc3d47675b8b321d147f8af8e0f616436ac507bf5a25f1c4d6180e797b549c7db2c1d
-  languageName: node
-  linkType: hard
-
 "regenerate-unicode-properties@npm:^10.0.1":
   version: 10.0.1
   resolution: "regenerate-unicode-properties@npm:10.0.1"
@@ -11440,13 +11386,6 @@ __metadata:
   version: 1.0.0
   resolution: "requires-port@npm:1.0.0"
   checksum: eee0e303adffb69be55d1a214e415cf42b7441ae858c76dfc5353148644f6fd6e698926fc4643f510d5c126d12a705e7c8ed7e38061113bdf37547ab356797ff
-  languageName: node
-  linkType: hard
-
-"reselect@npm:^4.1.5":
-  version: 4.1.5
-  resolution: "reselect@npm:4.1.5"
-  checksum: 54c13c1e795b2ea70cba8384138aebe78adda00cbea303cc94b64da0a70d74c896cc9a03115ae38b8bff990e7a60dcd6452ab68cbec01b0b38c1afda70714cf0
   languageName: node
   linkType: hard
 
