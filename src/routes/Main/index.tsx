@@ -5,7 +5,6 @@ import styles from './routes.module.scss';
 
 const Main = () => {
   const [inputText, setInputText] = useState('');
-  const [searchText, setSearchText] = useState('');
 
   const handleInput = (e: any) => {
     const { value } = e.currentTarget;
@@ -25,7 +24,7 @@ const Main = () => {
         온라인으로 참여하기
       </h1>
       <SearchBar onHandle={handleInput} onSubmit={handleSubmit} />
-      <SearchRecommendation inputText={inputText} />
+      {inputText !== '' && <SearchRecommendation inputText={inputText} />}
     </div>
   );
 };
