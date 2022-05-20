@@ -1,5 +1,6 @@
 [[redirects]] 
-from = "/proxy/*" 
-to = "https://kaleidoscopic-stardust-53342d.netlify.app/:splat" 
-status = 200 
-force = true
+  from = "/proxy/*" 
+  to = "https://apis.data.go.kr/:splat" 
+  status = 200 
+  force = true
+
