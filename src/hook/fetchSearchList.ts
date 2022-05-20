@@ -7,7 +7,7 @@ const fetchSearchList = (params: string) => {
   const request = axios.CancelToken.source();
   return axios
     .get(
-      `/B551182/diseaseInfoService/getDissNameCodeList?pageNo=1&numOfRows=50&ServiceKey=${serviceKey}&searchText=${params}&_type=json`,
+      `https://apis.data.go.kr/B551182/diseaseInfoService/getDissNameCodeList?pageNo=1&numOfRows=50&ServiceKey=${serviceKey}&searchText=${params}&_type=json`,
       {
         cancelToken: request.token,
       }
