@@ -2,11 +2,12 @@ import axios from 'axios';
 import { uniqBy } from 'lodash';
 
 const serviceKey = 'HDqjNstfdCbTtqxIYVEIlanJjeOBLkalHbPIFPBc1S1ze298Lu0DZhdGWRO1DkMDGOoPLbuSD1oB51OBh5YWcQ%3D%3D';
+const PROXY = '/proxy';
 
 const fetchSearchList = (params: string) => {
   return axios
     .get(
-      `/B551182/diseaseInfoService/getDissNameCodeList?pageNo=1&numOfRows=50&ServiceKey=${serviceKey}&searchText=${params}&_type=json`
+      `${PROXY}/B551182/diseaseInfoService/getDissNameCodeList?pageNo=1&numOfRows=50&ServiceKey=${serviceKey}&searchText=${params}&_type=json`
     )
     .then((res) => {
       const {
